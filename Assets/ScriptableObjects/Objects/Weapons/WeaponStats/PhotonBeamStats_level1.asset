@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2679d47c334bf43b30fe5e49487c55, type: 3}
+  m_Name: PhotonBeamStats_level1
+  m_EditorClassIdentifier: Assembly-CSharp::StaticWeaponStats
+  statsName: Photon Beam
+  statLevel: 1
+  damage: 5
+  coolDown: 2
+  lifeTime: 5
+  spawnedObject: {fileID: 1257778949824023612, guid: 4b8c60aa6fccaa846ba5ac1a917b057f, type: 3}
+  numberOfOrbiters: 0
+  rotationSpeed: 0
+  blastRadius: 0
+  fieldRaduis: 0
+  tickInterval: 0

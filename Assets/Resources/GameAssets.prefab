@@ -48,6 +48,7 @@ MonoBehaviour:
   pfDamagePopup: {fileID: 8390091064251752577, guid: af8bcb5fef0f92949922872cfd015ec4, type: 3}
   pfTextPopup: {fileID: 0}
   pfPlayerObject: {fileID: 0}
+  weaponTracerMaterial: {fileID: 2100000, guid: 876ef42d36ec7b8439d3087813b45369, type: 2}
   audioClipArray:
   - mixer: {fileID: -5333076078065036893, guid: 10961929dd84ed54fa90b7beed104eb5, type: 2}
     sound: 1

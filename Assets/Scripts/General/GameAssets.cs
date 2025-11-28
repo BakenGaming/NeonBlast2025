@@ -23,6 +23,7 @@ public class GameAssets : MonoBehaviour
     public Transform pfDamagePopup;
     public Transform pfTextPopup;
     public GameObject pfPlayerObject;
+    public Material weaponTracerMaterial;
   
     public SoundAudioClip[] audioClipArray;
     public MusicAudioClip[] musicTrackArray;
