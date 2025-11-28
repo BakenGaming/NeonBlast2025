@@ -14,4 +14,7 @@ public class StaticWeaponStats: ScriptableObject
     public float rotationSpeed;
     [Header("Explosive Only")]
     public float blastRadius;
+    [Header("Field Only")]
+    public float fieldRaduis;
+    public float tickInterval;
 }

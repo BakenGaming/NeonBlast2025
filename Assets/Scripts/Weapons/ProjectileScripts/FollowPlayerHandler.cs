@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OrbitFollowPlayer : MonoBehaviour
+public class FollowPlayerHandler : MonoBehaviour
 {
     public Transform playerTransform;
     public void Initialize()

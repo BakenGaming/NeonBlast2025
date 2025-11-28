@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8116101724223682870}
   - component: {fileID: 944431252179938041}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameAssets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfSysMessage: {fileID: 0}
-  pfDamagePopup: {fileID: 0}
+  pfDamagePopup: {fileID: 8390091064251752577, guid: af8bcb5fef0f92949922872cfd015ec4, type: 3}
   pfTextPopup: {fileID: 0}
   pfPlayerObject: {fileID: 0}
   audioClipArray:

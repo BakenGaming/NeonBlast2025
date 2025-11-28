@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff2679d47c334bf43b30fe5e49487c55, type: 3}
-  m_Name: ExplosiveShotStats_level1
+  m_Name: FusionFieldStats_level1
   m_EditorClassIdentifier: Assembly-CSharp::StaticWeaponStats
-  statsName: Explosive Stats
+  statsName: Fusion Field Stats
   statLevel: 1
-  damage: 20
-  coolDown: 3
-  lifeTime: 10
-  spawnedObject: {fileID: 6185798978937801651, guid: 9def7094b9bf9e644aa23a2e17bf9743, type: 3}
+  damage: 5
+  coolDown: 1
+  lifeTime: 4
+  spawnedObject: {fileID: 3984881463381586616, guid: 0c48d0af6ef99ef41a69e421a452713b, type: 3}
   numberOfOrbiters: 0
   rotationSpeed: 0
-  blastRadius: 2
-  fieldRaduis: 0
-  tickInterval: 0
+  blastRadius: 0
+  fieldRaduis: 2
+  tickInterval: 0.5

@@ -23,8 +23,6 @@ public class Orbiter : Weapon
         activeOrbiters = new List<OrbitHandler>();
         GameManager.i.SetupObjectPools(stats.spawnedObject.GetComponent<OrbitHandler>(), 5, "Orbiter", PoolType.Projectiles);
         _orbitPositionHandler = new OrbitPositionHandler(stats.numberOfOrbiters);
-        OrbitHandler.OnOrbiterDeactivate += DeactivateWeapon;
-
     }
     public override void ActivateWeaponCooldown()
     {
@@ -37,15 +35,15 @@ public class Orbiter : Weapon
         if(readyToActivate)
         {
             orbiterPivot = new GameObject("Orbitor Pivot");
-            orbiterPivot.AddComponent<OrbitFollowPlayer>();
-            orbiterPivot.GetComponent<OrbitFollowPlayer>().Initialize();
+            orbiterPivot.AddComponent<FollowPlayerHandler>();
+            orbiterPivot.GetComponent<FollowPlayerHandler>().Initialize();
             for(int i = 0; i < stats.numberOfOrbiters; i++)
             {
                 OrbitHandler newOrbiter = ObjectPooler.DequeueObject<OrbitHandler>("Orbiter", PoolType.Projectiles);
                 newOrbiter.transform.SetParent(orbiterPivot.transform);
                 newOrbiter.transform.position = _orbitPositionHandler.GetOrbitPositions()[i];
                 newOrbiter.gameObject.SetActive(true);
-                newOrbiter.InitializeOrbiter(GameManager.i.GetPlayerGO().transform, stats.damage, stats.lifeTime, 
+                newOrbiter.InitializeOrbiter(GameManager.i.GetPlayerGO().transform, stats.damage, 
                     stats.rotationSpeed, _handler.GetStats().GetCritChance());
                activeOrbiters.Add(newOrbiter);
             }

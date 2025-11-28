@@ -612,7 +612,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314764280}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -959,6 +959,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &706840398
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 971996240811603046, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_Name
+      value: GameAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116101724223682870, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94f75e9e66f20da40bcc0e6e3ebcefc0, type: 3}
 --- !u!224 &824609183 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7949607191808970349, guid: 7a949668bf6cbb04ca76dcccf69f95d2, type: 3}
@@ -1604,7 +1661,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717495161}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1765,7 +1822,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005385917}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2313,7 +2370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sysMessagePoint: {fileID: 0}
   spawnPoint: {fileID: 7975385658292993745}
-  startingWeapon: {fileID: 11400000, guid: 3e2bfffea1f1f8b43acd861ee3a5f861, type: 2}
+  startingWeapon: {fileID: 11400000, guid: d72bc8ec77b9c7b45850e0023732a28b, type: 2}
   isSpawningPlayer: 0
 --- !u!114 &7927517254232978945
 MonoBehaviour:
@@ -2380,16 +2437,16 @@ MonoBehaviour:
     m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 0
-  collectable:
+    m_Bits: 256
+  whatIsCollectable:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   whatIsUI:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32
   masterMixer: {fileID: 0}
   sfxMixer: {fileID: 0}
   musicMixer: {fileID: 0}
@@ -2457,3 +2514,4 @@ SceneRoots:
   - {fileID: 1717495166}
   - {fileID: 2005385922}
   - {fileID: 314764285}
+  - {fileID: 706840398}
