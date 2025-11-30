@@ -729,7 +729,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BackGroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -864,7 +864,7 @@ SpriteRenderer:
   m_SortingLayerID: 1655624599
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7054736046923976008, guid: 67ecfb9cdabf5034da4e215915cd0953, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8b2557ab304ffa46b0e42d25dbca6af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000008b26442d97d3ae627d2857d5eb0548f64f9745f5
+  m_ApplyToSortingLayers: 000000008b26442d97d3ae627d2857d5eb0548f64f9745f5159b281f
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2057,7 +2057,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4667616932544559294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2313,7 +2313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sysMessagePoint: {fileID: 0}
   spawnPoint: {fileID: 7975385658292993745}
-  startingWeapon: {fileID: 11400000, guid: 200c5412fccb6c748b82757f409a449a, type: 2}
+  startingWeapon: {fileID: 11400000, guid: d72bc8ec77b9c7b45850e0023732a28b, type: 2}
   isSpawningPlayer: 0
 --- !u!114 &7927517254232978945
 MonoBehaviour:

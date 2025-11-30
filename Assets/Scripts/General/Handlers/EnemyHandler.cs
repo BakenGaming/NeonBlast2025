@@ -29,6 +29,7 @@ public class EnemyHandler : MonoBehaviour, IDamageable
 
     public void TakeDamage(int _d, bool _isCrit)
     {
+        DamagePopup.Create(transform.position, _d, _isCrit);
         //Debug.Log($"Enemy Takes Damage {_d}, and it is CRIT {_isCrit}");
     }
 }

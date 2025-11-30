@@ -8,14 +8,14 @@ public class PlayerHandler : MonoBehaviour, IHandler
     #region Variables
     [SerializeField] private PlayerStatsSO playerStatsSO;
     [SerializeField] private InputReader _input;
-    private Vector3 offset = new Vector3(0f,1.25f,0f);
+    private Vector3 offset = new Vector3(0f,-1.5f,0f);
     private StatSystem stats;
     private HealthSystem _healthSystem;
     private Rigidbody2D playerRB;
     private BoxCollider2D playerCollider;
     private Vector2 moveInput, lastRecordedInput, smoothMovementInput, smoothInputVelocity;
     private float moveRot;
-    private bool isPlayerActive=false, playerIsMoving=false;
+    private bool isPlayerActive=false, playerIsMoving=false, facingRight=true;
     private Camera mainCam;
     private Transform firePoint;
     private GameObject healthBarGraphic;
@@ -105,7 +105,7 @@ public class PlayerHandler : MonoBehaviour, IHandler
         //Vector2 moveSpeed = moveInput.normalized;
         //playerRB.linearVelocity = new Vector2(moveInput.x * stats.GetMoveSpeed(), 
         //    moveInput.y *.5f * stats.GetMoveSpeed());
-
+        //FlipPlayer();
         //moveRot = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg -90f;
         //transform.rotation = Quaternion.Euler(0,0,moveRot);
 
@@ -115,11 +115,25 @@ public class PlayerHandler : MonoBehaviour, IHandler
         healthBarGraphic.transform.rotation = mainCam.transform.rotation;
         healthBarGraphic.transform.position = transform.position + offset; 
     }
+
+    private void FlipPlayer()
+    {
+        if (moveInput.x < 0)
+        {
+            playerRB.transform.localScale = new Vector3(-1f, 1f, 1f);
+            facingRight = false;
+        }
+        else if (moveInput.x > 0)
+        {
+            playerRB.transform.localScale = Vector3.one;
+            facingRight = true;
+        }
+    } 
     private void SmoothedMovement()
     {
         smoothMovementInput = Vector2.SmoothDamp(
             smoothMovementInput, moveInput,
-            ref smoothInputVelocity, 0.1f);
+            ref smoothInputVelocity, 0.25f);
 
         //if(smoothMovementInput == Vector2.zero) smoothMovementInput = lastRecordedInput;
         playerRB.linearVelocity = smoothMovementInput * stats.GetMoveSpeed() * Time.deltaTime;
