@@ -4,7 +4,7 @@ public class ProjectileHandler : MonoBehaviour
 {
     private Transform target;
     private Rigidbody2D rb;
-    private int damage;
+    private int damage, actualDamage;
     private float lifeTimer, speed, critChance;
 
     public void Initialize(Transform _t, int _d, float _lt, float _s, float _c)
@@ -20,7 +20,6 @@ public class ProjectileHandler : MonoBehaviour
 
     private void Update() 
     {
-        Debug.Log($"Target: {target}");
         if(target == null || target.gameObject.activeInHierarchy == false) { ObjectPooler.EnqueueObject(this, "Bullet", PoolType.Projectiles); return;}
 
         Vector3 moveDir = (target.transform.position - transform.position).normalized;
@@ -45,13 +44,14 @@ public class ProjectileHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D trigger) 
     {
-        Debug.Log($"Bullet Hit Something {trigger.gameObject}");
         IDamageable damageable = trigger.gameObject.GetComponent<IDamageable>();
 
         bool isCritical = Random.Range(0f,100f) < critChance;
+        if(isCritical) actualDamage = (int)(damage * 1.5f);
+        else actualDamage = damage;
 
         if(damageable != null) 
-            damageable.TakeDamage(damage, isCritical);
+            damageable.TakeDamage(actualDamage, isCritical);
 
         ObjectPooler.EnqueueObject(this, "Bullet", PoolType.Projectiles);
     }

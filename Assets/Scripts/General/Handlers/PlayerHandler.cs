@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHandler : MonoBehaviour, IHandler
 {
@@ -19,6 +17,7 @@ public class PlayerHandler : MonoBehaviour, IHandler
     private Camera mainCam;
     private Transform firePoint;
     private GameObject healthBarGraphic;
+    private Slider healthValueSlider;
 
     #endregion
     #region Initialize
@@ -40,6 +39,8 @@ public class PlayerHandler : MonoBehaviour, IHandler
         firePoint = transform.Find("FirePoint");
         mainCam = Camera.main;
         healthBarGraphic = transform.Find("HealthBar").gameObject;
+        healthValueSlider = healthBarGraphic.transform.Find("Slider").GetComponent<Slider>();
+        healthValueSlider.value = _healthSystem.GetCurrentHealth();
         GetComponent<WeaponSystem>().InitializeFreshGame(GameManager.i.GetStartingWeapon());
 
         isPlayerActive = true;

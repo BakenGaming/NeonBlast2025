@@ -35,17 +35,18 @@ public class FusionField : Weapon
     }
     private void SetWeaponActive()
     {
-        activeDurationTimer = stats.lifeTime;
+        //activeDurationTimer = stats.lifeTime;
         readyToActivate = false;
         isActive = true;
     }
     public override void UpdateWeaponTimers()
     {
-        if(!isActive) coolDownTimer -= Time.deltaTime;
-        else activeDurationTimer -= Time.deltaTime;
+        //THIS WEAPON DOES NOT DEACTIVATE
+        //if(!isActive) coolDownTimer -= Time.deltaTime;
+        //else activeDurationTimer -= Time.deltaTime;
 
-        if(coolDownTimer <= 0 && !isActive) readyToActivate = true;
-        if(activeDurationTimer <= 0 && isActive) DeactivateWeapon();
+        //if(coolDownTimer <= 0 && !isActive) readyToActivate = true;
+        //if(activeDurationTimer <= 0 && isActive) DeactivateWeapon();
     }
     private void DeactivateWeapon()
     {
@@ -61,6 +62,4 @@ public class FusionField : Weapon
     }
 
     public override StaticWeaponStats GetWeaponStats(){return stats;}
-
-
 }

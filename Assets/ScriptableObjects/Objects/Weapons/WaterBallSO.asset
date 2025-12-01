@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9acf484dd77cb834599e4362ed585feb, type: 3}
-  m_Name: PhotonSO
+  m_Name: WaterBallSO
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
   weaponName: Basic Shot
   ID: 1

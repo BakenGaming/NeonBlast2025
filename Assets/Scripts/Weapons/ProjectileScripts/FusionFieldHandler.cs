@@ -1,9 +1,10 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FusionFieldHandler : MonoBehaviour
 {
-    private int damage;
+    private int damage, actualDamage;
     private float critChance, damageCooldownTimer, damageRadius, tickInterval;
     private bool hasDamaged;
     public void Initialize(int _d, float _c, float _r, float _t)
@@ -36,8 +37,10 @@ public class FusionFieldHandler : MonoBehaviour
             _h = damageables[i].gameObject.GetComponent<EnemyHandler>();
             if(_h != null)
             {
-                DamagePopup.Create(_h.gameObject.transform.position, damage, isCritical);
-                _h.TakeDamage(damage, isCritical);
+                if(isCritical) actualDamage = (int)(damage * 1.5f);
+                else actualDamage = damage;
+                
+                _h.TakeDamage(actualDamage, isCritical);
                 dmgeCnt++;
             }
         }

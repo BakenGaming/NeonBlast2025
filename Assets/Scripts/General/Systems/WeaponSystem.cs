@@ -1,16 +1,18 @@
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 
 public class WeaponSystem : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
-    [SerializeField] private Transform orbitPivot;
     private Dictionary<Weapon, int> equippedWeapons;
+    private Weapon mainWeapon;
     public void InitializeFreshGame(WeaponSO startingWeapon)
     {
         Debug.Log("Initialize Weapon System");
         equippedWeapons = new Dictionary<Weapon, int>();
+        mainWeapon = startingWeapon.weapon;
         EquipNewWeapon(startingWeapon);
     }
 
@@ -44,5 +46,4 @@ public class WeaponSystem : MonoBehaviour
         
     }
     public Transform GetFirePoint(){return firePoint;}
-    public Transform GetOrbitPivotPoint(){return orbitPivot;}
 }

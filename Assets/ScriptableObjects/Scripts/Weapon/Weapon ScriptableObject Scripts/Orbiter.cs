@@ -75,5 +75,5 @@ public class Orbiter : Weapon
         Destroy(orbiterPivot.gameObject);
         ActivateWeaponCooldown();
     }
-    public override StaticWeaponStats GetWeaponStats(){return stats;}   
+    public override StaticWeaponStats GetWeaponStats(){return stats;} 
 }
