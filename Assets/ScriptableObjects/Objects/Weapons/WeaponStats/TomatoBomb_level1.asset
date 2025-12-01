@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2679d47c334bf43b30fe5e49487c55, type: 3}
+  m_Name: TomatoBomb_level1
+  m_EditorClassIdentifier: Assembly-CSharp::StaticWeaponStats
+  statsName: Tomato Bomb Stats
+  statLevel: 1
+  damage: 1.5
+  speed: 20
+  critChance: 10
+  coolDown: 5
+  activelifeTime: 2
+  spawnedObject: {fileID: 7670275335038541353, guid: 9a4ffa489d15b924bb449989450dd6cc, type: 3}
+  numberOfOrbiters: 0
+  rotationSpeed: 0
+  blastRadius: 0
+  fieldToSpawn: {fileID: 4724379522763462994, guid: 8450caf07897d1744ab747f109624d30, type: 3}
+  fieldDamage: 0.25
+  fieldRadius: 1.25
+  tickInterval: 0.7
+  residualLifetime: 2

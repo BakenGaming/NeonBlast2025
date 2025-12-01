@@ -36,10 +36,12 @@ public class EnemyMovementHandler : MonoBehaviour
             thisRigidbody.linearVelocity = Vector2.zero;
             return;
         }
+        /*
         if (Vector2.Distance(GameManager.i.GetPlayerGO().transform.position, transform.position) >= 1f)
             thisRigidbody.linearVelocity = aimDirection * handler.GetStats().GetMoveSpeed() * Time.deltaTime;
         else
             thisRigidbody.linearVelocity = Vector2.zero;
+        */
     }
     public void SetCanMove(bool _canMove){canMove = _canMove;}
     public bool GetCanMove(){return canMove;}

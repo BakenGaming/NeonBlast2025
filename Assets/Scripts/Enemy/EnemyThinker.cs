@@ -12,7 +12,7 @@ public class EnemyThinker : MonoBehaviour
     public void ActivateBrain(IHandler _handler)
     {
         if(_testing) return; //remove after testing
-        brain = _handler.GetStats().GetBrains();
+        //brain = _handler.GetStats().GetBrains();
         foreach (Brain _brain in brain)
             _brain.InitializeAI(GetComponent<IHandler>());
     }

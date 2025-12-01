@@ -2,12 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHandler : MonoBehaviour, IHandler
-{
+{   
     #region Variables
     [SerializeField] private PlayerStatsSO playerStatsSO;
     [SerializeField] private InputReader _input;
+    [Header("Testing Triggers")]
+    [SerializeField] private bool useShipStyleControls;
     private Vector3 offset = new Vector3(0f,-1.5f,0f);
-    private StatSystem stats;
     private HealthSystem _healthSystem;
     private Rigidbody2D playerRB;
     private BoxCollider2D playerCollider;
@@ -32,8 +33,7 @@ public class PlayerHandler : MonoBehaviour, IHandler
         GameManager.i.SetPlayerGO(gameObject);
         //*****************************************
         _input.moveEvent += SetMoveDirection;
-        stats = new StatSystem(playerStatsSO);
-        _healthSystem = new HealthSystem(stats.GetHealth());
+        _healthSystem = new HealthSystem(GameManager.i.GetPlayerStats().GetPlayerHP());
         playerRB = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<BoxCollider2D>();
         firePoint = transform.Find("FirePoint");
@@ -41,7 +41,7 @@ public class PlayerHandler : MonoBehaviour, IHandler
         healthBarGraphic = transform.Find("HealthBar").gameObject;
         healthValueSlider = healthBarGraphic.transform.Find("Slider").GetComponent<Slider>();
         healthValueSlider.value = _healthSystem.GetCurrentHealth();
-        GetComponent<WeaponSystem>().InitializeFreshGame(GameManager.i.GetStartingWeapon());
+        GetComponent<WeaponSystem>().InitializeFreshGame(GameManager.i.GetPlayerStats().GetPlayerWEAPON());
 
         isPlayerActive = true;
     }
@@ -56,11 +56,6 @@ public class PlayerHandler : MonoBehaviour, IHandler
     public HealthSystem GetHealthSystem()
     {
         return _healthSystem;
-    }
-
-    public StatSystem GetStats()
-    {
-        return stats;
     }
     #endregion
     #region Handle Player Functions
@@ -101,12 +96,19 @@ public class PlayerHandler : MonoBehaviour, IHandler
             playerRB.linearVelocity = Vector2.zero;
             return;
         }
-        SmoothedMovement();
-        RotateShip();
-        //Vector2 moveSpeed = moveInput.normalized;
-        //playerRB.linearVelocity = new Vector2(moveInput.x * stats.GetMoveSpeed(), 
-        //    moveInput.y *.5f * stats.GetMoveSpeed());
-        //FlipPlayer();
+
+        if(useShipStyleControls)
+        {
+            SmoothedMovement();
+            RotateShip();
+        }
+        else
+        {
+            Vector2 moveSpeed = moveInput.normalized;
+            playerRB.linearVelocity = new Vector2(moveInput.x * GameManager.i.GetPlayerStats().GetPlayerSPEED(), 
+                moveInput.y *.5f * GameManager.i.GetPlayerStats().GetPlayerSPEED());
+            FlipPlayer();
+        }
         //moveRot = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg -90f;
         //transform.rotation = Quaternion.Euler(0,0,moveRot);
 
@@ -137,7 +139,7 @@ public class PlayerHandler : MonoBehaviour, IHandler
             ref smoothInputVelocity, 0.25f);
 
         //if(smoothMovementInput == Vector2.zero) smoothMovementInput = lastRecordedInput;
-        playerRB.linearVelocity = smoothMovementInput * stats.GetMoveSpeed() * Time.deltaTime;
+        playerRB.linearVelocity = smoothMovementInput * GameManager.i.GetPlayerStats().GetPlayerSPEED() * Time.deltaTime;
     }
     private void RotateShip()
     {

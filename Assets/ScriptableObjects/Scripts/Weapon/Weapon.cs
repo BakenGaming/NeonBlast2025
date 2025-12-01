@@ -6,5 +6,4 @@ public abstract class Weapon : ScriptableObject
     public abstract void TryActivateWeapon();
     public abstract void ActivateWeaponCooldown();
     public abstract void UpdateWeaponTimers();
-    public abstract StaticWeaponStats GetWeaponStats();
 }

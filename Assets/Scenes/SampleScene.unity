@@ -613,7 +613,7 @@ SpriteRenderer:
   m_SortingLayerID: 1655624599
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e8b2557ab304ffa46b0e42d25dbca6af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd1a3dbc33ef9b04f86304f130b5478a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1490,8 +1490,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a41743eedac0874ca709893d8e8a8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHandler
-  playerStatsSO: {fileID: 11400000, guid: 21558c167efd3644980d4e3b7913bad0, type: 2}
+  playerStatsSO: {fileID: 11400000, guid: d75b69ddd416b07469d2bb91f01abdf8, type: 2}
   _input: {fileID: 11400000, guid: a30328454708e374b8489476938bc490, type: 2}
+  useShipStyleControls: 0
 --- !u!60 &4667616932544559295
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1615,9 +1616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8762e26e07b77b4d8cd8c8109ad600a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sysMessagePoint: {fileID: 0}
   spawnPoint: {fileID: 7975385658292993745}
-  startingWeapon: {fileID: 11400000, guid: 5257e8e0a68081849b906e97208c8f30, type: 2}
+  basePlayerStats: {fileID: 11400000, guid: f3f9572629e47e74a89a2263b658c23b, type: 2}
   isSpawningPlayer: 0
 --- !u!4 &7975385658292993745
 Transform:

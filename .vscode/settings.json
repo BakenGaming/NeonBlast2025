@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "NeonBlast2025.slnx"
+    "dotnet.defaultSolution": "AutoShooter2025.slnx"
 }

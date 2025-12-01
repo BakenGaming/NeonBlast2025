@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Pool;
 
 public class GameManager : MonoBehaviour
 {
     #region Variables
     private static GameManager _i;
     public static GameManager i { get { return _i; } }
-    [SerializeField] private Transform sysMessagePoint;
     [SerializeField] private Transform spawnPoint;
-    [SerializeField] private WeaponSO startingWeapon;
+    [SerializeField] private PlayerStatsSO basePlayerStats;
     [SerializeField] private bool isSpawningPlayer;
+    private PlayerStatSystem playerStats;
     private GameObject playerGO;
     private bool isPaused;
     #endregion
@@ -22,6 +18,9 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Initialize {this}");
         _i = this;  
         SetupEmptyPools();
+        //only happens on new game
+        playerStats = new PlayerStatSystem(basePlayerStats);
+        //************************
         if(isSpawningPlayer) SpawnPlayerObject();
     }
     private void SpawnPlayerObject()
@@ -52,12 +51,11 @@ public class GameManager : MonoBehaviour
 
     //TESTING ONLY
     public void SetPlayerGO(GameObject _p){playerGO = _p;}
+    //****************************
     public void PauseGame(){if(isPaused) return; else isPaused = true;}
     public void UnPauseGame(){if(isPaused) isPaused = false; else return;}
-    
-    public Transform GetSysMessagePoint(){ return sysMessagePoint;}
     public GameObject GetPlayerGO() { return playerGO; }
     public bool GetIsPaused() { return isPaused; }
-    public WeaponSO GetStartingWeapon(){return startingWeapon;}
+    public PlayerStatSystem GetPlayerStats(){return playerStats;}
 
 }

@@ -19,11 +19,9 @@ public class GameAssets : MonoBehaviour
         _i = this;    
     }
 
-    public Transform pfSysMessage;
     public Transform pfDamagePopup;
     public Transform pfTextPopup;
     public GameObject pfPlayerObject;
-    public Material weaponTracerMaterial;
   
     public SoundAudioClip[] audioClipArray;
     public MusicAudioClip[] musicTrackArray;

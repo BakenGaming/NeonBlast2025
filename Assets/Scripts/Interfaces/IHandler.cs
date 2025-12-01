@@ -6,5 +6,4 @@ public interface IHandler
     public abstract HealthSystem GetHealthSystem();
     public abstract void UpdateHealth();
     public abstract void HandleDeath();
-    public abstract StatSystem GetStats();
 }
