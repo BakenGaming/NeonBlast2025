@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 40653a921f6a41c4cb025e35ced3b3e2
+guid: 7a6b87fd0061bbe40a0f0395ddc81b07
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7528773226200960858
-    second: Weapons_Acorn_A_0
+      213: -5835227121904088715
+    second: ToySoldier_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weapons_Acorn_A_0
+      name: ToySoldier_0
       rect:
         serializedVersion: 2
-        x: 85
-        y: 71
-        width: 91
-        height: 113
+        x: 49
+        y: 11
+        width: 134
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5f0e2e2c539b7860800000000000000
-      internalID: 7528773226200960858
+      spriteID: 5798e2759db150fa0800000000000000
+      internalID: -5835227121904088715
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Weapons_Acorn_A_0: 7528773226200960858
+      ToySoldier_0: -5835227121904088715
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

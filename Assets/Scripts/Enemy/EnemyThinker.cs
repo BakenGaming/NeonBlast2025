@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyThinker : MonoBehaviour
@@ -9,12 +7,12 @@ public class EnemyThinker : MonoBehaviour
     //*******************************************
     private Brain[] brain;
 
-    public void ActivateBrain(IHandler _handler)
+    public void ActivateBrain(EnemyStatSystem _stats)
     {
         if(_testing) return; //remove after testing
-        //brain = _handler.GetStats().GetBrains();
+        brain = _stats.GetEnemyBRAINS();
         foreach (Brain _brain in brain)
-            _brain.InitializeAI(GetComponent<IHandler>());
+            _brain.InitializeAI();
     }
     private void LateUpdate() 
     {

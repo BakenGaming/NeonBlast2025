@@ -23,4 +23,5 @@ public class StaticWeaponStats: ScriptableObject
     public float fieldRadius;
     public float tickInterval;
     public float residualLifetime;
+    public int numberOfFields;
 }

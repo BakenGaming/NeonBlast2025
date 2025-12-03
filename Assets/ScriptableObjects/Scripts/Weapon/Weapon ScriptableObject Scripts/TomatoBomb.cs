@@ -13,7 +13,8 @@ public class TomatoBomb : Weapon
         stats = _s;
         readyToFire = true;
         firePoint = _w.GetFirePoint();
-        GameManager.i.SetupObjectPools(stats.spawnedObject.GetComponent<TomatoHandler>(), 50, "Tomato", PoolType.Projectiles);
+        GameManager.i.SetupObjectPools(stats.spawnedObject.GetComponent<TomatoHandler>(), 30, "Tomato", PoolType.Projectiles);
+        GameManager.i.SetupObjectPools(stats.fieldToSpawn.GetComponent<TomatoAcidField>(), 10, "Acid Field", PoolType.Projectiles);
     }
     public override void TryActivateWeapon()
     {

@@ -16,4 +16,4 @@ MonoBehaviour:
   ATK: 19
   CRIT: 1
   SPEED: 12
-  WEAPON: {fileID: 11400000, guid: 49c264e9edf78c445952849a5d1dfb2b, type: 2}
+  WEAPON: {fileID: 11400000, guid: 3119034e59cda1a4ea0e07794cbe3431, type: 2}

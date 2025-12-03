@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 827f79b61993a2c4cb78075ad80850b8, type: 3}
-  m_Name: BasicEnemyStatsSO
-  m_EditorClassIdentifier: 
-  health: 0
-  moveSpeed: 0
+  m_Script: {fileID: 11500000, guid: 13dcecf3ef49d2a46914f4f77f0ad070, type: 3}
+  m_Name: Acorn Shower
+  m_EditorClassIdentifier: Assembly-CSharp::AcornShower

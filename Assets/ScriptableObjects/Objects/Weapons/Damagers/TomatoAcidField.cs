@@ -37,7 +37,7 @@ public class TomatoAcidField : MonoBehaviour
     public void FieldFadeComplete()
     {
         readyToDamage = false;
-        Destroy(gameObject);
+        ObjectPooler.EnqueueObject(this, "Acid Field", PoolType.Projectiles);
     }
     private void TryToCauseDamage()
     {

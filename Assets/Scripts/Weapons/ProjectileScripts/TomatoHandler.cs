@@ -53,8 +53,11 @@ public class TomatoHandler : MonoBehaviour
         
         if(damageable != null)
         {
-            GameObject newSplatter = Instantiate(stats.fieldToSpawn, trigger.gameObject.transform.position, Quaternion.identity);
-            newSplatter.GetComponent<TomatoAcidField>().Initialize(stats);
+            TomatoAcidField newAcidField = ObjectPooler.DequeueObject<TomatoAcidField>("Acid Field", PoolType.Projectiles);
+            newAcidField.transform.position = trigger.gameObject.transform.position;
+            newAcidField.gameObject.SetActive(true);
+            newAcidField.Initialize(stats);
+
             damageable.TakeDamage(actualDamage, isCritical);
         }
 

@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff2679d47c334bf43b30fe5e49487c55, type: 3}
-  m_Name: Shuriken_level1
+  m_Name: AcornShower_level1
   m_EditorClassIdentifier: Assembly-CSharp::StaticWeaponStats
-  statsName: Shuriken
+  statsName: Acorn Shower
   statLevel: 1
-  damage: 0.5
-  speed: 20
+  damage: 0
+  speed: 30
   critChance: 10
-  coolDown: 3
-  activelifeTime: 5
-  spawnedObject: {fileID: 1829438459853298344, guid: f8f8952773c76224989e53c5475817ca, type: 3}
-  numberOfOrbiters: 2
-  rotationSpeed: 200
+  coolDown: 1
+  activelifeTime: 0
+  spawnedObject: {fileID: 0}
+  numberOfOrbiters: 0
+  rotationSpeed: 0
   blastRadius: 0
-  fieldToSpawn: {fileID: 0}
-  fieldDamage: 0
-  fieldRadius: 0
+  fieldToSpawn: {fileID: 3892587968426976414, guid: 99576c21f0dfd2540a6d8b845d7add80, type: 3}
+  fieldDamage: 2
+  fieldRadius: 2
   tickInterval: 0
   residualLifetime: 0
+  numberOfFields: 1
